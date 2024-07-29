@@ -19,5 +19,12 @@
 
 Запуск программы
 ```
+подключите свою PostgeSQL базу данных
+config -> settings.py -> DATABASES
+```
+```
+python manage.py fill_category
+```
+```
 python manage.py runserver
 ```
