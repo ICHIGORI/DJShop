@@ -1,0 +1,39 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Fishing",
+      "description": "Всё для рыбалки"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Охота",
+      "description": "Всё для охоты"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "Swimming",
+      "description": "Всё для плавания"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Приманка",
+      "description": "Для маленькой рыбки",
+      "preview_image": "",
+      "category": 1,
+      "price_purchase": 5.0,
+      "created_at": "2024-07-29",
+      "updated_at": "2024-07-29"
+    }
+  }
+]
