@@ -23,8 +23,9 @@ class Product(models.Model):
     preview_image = models.ImageField(upload_to='product/preview_img/', verbose_name="PreviewImg", **NULLABLE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     price_purchase = models.FloatField(verbose_name="PricePurchase", help_text="Цена продукта")
-    created_at = models.DateField(help_text="Дата создания")
-    updated_at = models.DateField(help_text="Дата обновления")
+    manufactured_at = models.DateField(verbose_name="Дата производства продукта", help_text="Дата производства", **NULLABLE)
+    created_at = models.DateField(auto_now_add=True, verbose_name="created_at", help_text="Дата создания")
+    updated_at = models.DateField(auto_now=True, verbose_name="updated_at", help_text="Дата обновления", **NULLABLE)
 
     def __str__(self):
         return f"{self.category=} {self.name=} ({self.price_purchase} {self.created_at=} {self.updated_at=})"
